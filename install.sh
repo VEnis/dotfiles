@@ -12,7 +12,6 @@ function install_vundle {
   vundle_path=~/.vim/bundle/vundle
   if [[ ! -d $vundle_path ]]
   then
-    echo "INSTALL"
     git clone https://github.com/gmarik/vundle.git $vundle_path
     vim --noplugin -u ~/.vim/vundles.vim -N "+set hidden" "+syntax on" +BundleClean! +BundleInstall +qall
   fi
